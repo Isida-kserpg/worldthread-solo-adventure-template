@@ -5,7 +5,7 @@
 ## 階段 0：決策與入口文件
 
 - [x] 確認正式中英文名（Worldthread／織世）、套件／資料夾名（`worldthread-solo-adventure-template`）與 MIT License。
-- [x] 確認第一版範例題材、預設說書人組合及是否只使用原創素材（低魔奇幻邊境謎案；溫和、均衡、高壓三種說書人；範例全為原創）。
+- [x] 確認第一版範例題材、預設說書人組合及是否只使用原創素材（低魔奇幻邊境謎案；溫和、均衡、高壓三種說書人；範例全為原創）。`0.3.0` 起另隨附明確授權的第三方規則範例：Fate Core／FAE（CC-BY 3.0），四套（中英 × 核心／快速）置於 `extras/` 規則範例庫，擇一複製進 `game/reference/rules/` 啟用；標示見 `dist/worldthread-solo-adventure-template/THIRD-PARTY-NOTICES.md`。
 - [x] 依上述決策產生資訊完整的發行版 README 與 LICENSE。
 
 ## 階段 1：可攜範本骨架

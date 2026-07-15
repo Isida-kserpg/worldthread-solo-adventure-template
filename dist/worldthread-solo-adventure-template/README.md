@@ -1,14 +1,21 @@
 # Worldthread／織世：單人 TRPG 範本
 
-版本：`0.2.0`。這是一個可複製、解壓後即可交給具資料夾讀寫能力之 AI 服務使用的繁體中文單人 TRPG 範本；不綁定特定模型或平台。
+版本：`0.3.0`。這是一個可複製、解壓後即可交給具資料夾讀寫能力之 AI 服務使用的繁體中文單人 TRPG 範本；不綁定特定模型或平台。
 
 ## 三分鐘開始
 
 1. 複製整個資料夾，勿直接在發行包中進行你的戰役。
-2. 閱讀 `protocol/PLAYBOOK.md`，選擇 `game/templates/narrators/` 的一個說書人檔。
-3. 將 `game/templates/starter-state/` 複製為 `game/state/`，再填寫主角與開場場景。也可直接使用本包的「霧渡口」範例。
-4. 對 AI 說：「讀取 `protocol/PLAYBOOK.md`、`game/reference/`、`game/state/` 與說書人檔 `game/templates/narrators/balanced-weaver.md`；作為主持人為我開局。不要替我的主角做決定。」（說書人檔路徑換成你在第 2 步選的那一個。）
+2. 打開 `game/session-brief.md`，編輯其中 **B 段「可調整區塊」**（說書人、規則系統、題材界線、壓力、嚴謹度、主角）。這份檔案已把「主持人該讀哪些規範與檔案」寫在 A 段，你**只需要改可調整區塊**、不必動開局提示詞。
+3. 將 `game/templates/starter-state/` 複製為 `game/state/`（想玩內附範例「霧渡口」就直接用既有 `game/reference/`）。
+4. 對 AI 說（就這一句，不必客製化）：
+
+   ```text
+   讀取 game/session-brief.md，依其規範與我的設定為我開局。
+   ```
+
 5. 以角色行動、對話或 OOC 指令遊玩。每回合依協定追加事件與更新狀態。
+
+要用 Fate 或自帶規則書、或了解如何啟用與替換規則，見 [ADDING-RULEBOOKS.md](ADDING-RULEBOOKS.md) 與 [extras/README.md](extras/README.md)。
 
 ## 範例：霧渡口的失竊鐘聲
 
@@ -36,4 +43,6 @@
 
 ## 內容與權利
 
-範本與「霧渡口」範例採 MIT 授權。你加入的規則書、世界設定和玩家內容仍受其原始權利條件約束；只放入你有權使用的內容。要放入自己的規則書（含 PDF）或其他素材，請先讀 [ADDING-RULEBOOKS.md](ADDING-RULEBOOKS.md)：位置、Markdown 轉換建議、優先序宣告與權利注意事項都在裡面。詳見 `protocol/DATA-SCHEMA.md`、`protocol/RAG-PROTOCOL.md` 與 `protocol/VOICE-PROTOCOL.md`。
+範本框架與「霧渡口」原創範例採 MIT 授權。本包另**隨附 Fate Core／Fate Accelerated 規則的完整文字**作為規則範例：四套（中英 × 核心／快速）置於 `extras/` 規則範例庫，**預設不參與裁定**；要用哪套，把它複製一套進 `game/reference/rules/` 並在 `priority.md` 宣告即可（同時只保留一套完整系統）。這些屬 Evil Hat Productions 的素材，採 **CC-BY 3.0** 授權（**非** MIT），只收錄文字、不含商標 logo／字型／骰面圖像。與一般規則書不同，CC-BY **明確允許再散布**——連同資料夾散布時，須保留規定的標示（見根目錄 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)）。如何啟用、或中英替換，見 [extras/README.md](extras/README.md) 與 [ADDING-RULEBOOKS.md](ADDING-RULEBOOKS.md)。
+
+要放入你自己的規則書（含 PDF）或其他素材，請先讀 [ADDING-RULEBOOKS.md](ADDING-RULEBOOKS.md)：位置、Markdown 轉換建議、優先序宣告與權利注意事項都在裡面。你加入的素材仍受其原始權利條件約束；只放入你有權使用的內容。詳見 `protocol/DATA-SCHEMA.md`、`protocol/RAG-PROTOCOL.md` 與 `protocol/VOICE-PROTOCOL.md`。
